@@ -1,0 +1,10 @@
+<!--components/header/index.wxml-->
+<view class="container">
+    <text class="year" >{{year}} </text>
+    <view class="subContainer">
+        <text class="weekNHour">{{hour}}时</text>
+        <text class="weekNHour">周{{weekday[day]}}</text>
+    </view>
+    <text class="month" style="color:{{color}}"> {{showMonth}}</text>
+    <text class="color" style="color:{{color}}"> {{color}}</text>
+</view>

@@ -1,0 +1,37 @@
+{
+    "pages": [
+        "pages/form/index",
+        "pages/class/index",
+        "pages/profile/index",
+        "pages/detail/index",
+        "pages/event/index",
+        "pages/view/index"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#0347ce",
+        "navigationBarTitleText": "classInfoAssistant",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/class/index",
+                "iconPath": "./images/class.png",
+                "selectedIconPath": "./images/classS.png"
+            },
+            {
+                "pagePath": "pages/form/index",
+                "iconPath": "./images/form.png",
+                "selectedIconPath": "./images/formS.png"
+            },
+            {
+                "pagePath": "pages/profile/index",
+                "iconPath": "./images/profile.png",
+                "selectedIconPath": "./images/profileS.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

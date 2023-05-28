@@ -1,0 +1,7 @@
+<!--components/avatar/index.wxml-->
+<view class="container" bindtap="onTap">
+    <view class="bgCircle" style="background-color: {{bcolor}};">
+        <image src="{{imgSrc?imgSrc:'../../images/profile.png'}}" class="avatar" /> 
+    </view>
+    <text class="des" style="color: {{isAdmin?'#0347ce':'#000000'}};">{{name?name:aliyas}}</text>
+</view>

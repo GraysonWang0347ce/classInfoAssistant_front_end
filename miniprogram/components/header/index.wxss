@@ -1,0 +1,39 @@
+/* components/header/index.wxss */
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-end ;
+    margin: 10rpx 0 0rpx 10rpx;
+}
+
+.container text{
+    font-size: 50rpx;
+}
+
+.subContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10rpx;
+    margin-right: 18rpx;
+    border-left: solid 2rpx #000;
+    padding-left: 10rpx;
+}
+
+.weekNHour{
+    font-size: 25rpx !important;
+}
+
+.year{
+    font-weight: 800;
+}
+
+.month{
+    font-weight: 560;
+}
+
+.color{
+   font-size: 16rpx !important; 
+}

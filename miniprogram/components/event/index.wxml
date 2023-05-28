@@ -1,0 +1,36 @@
+<!--components/event/index.wxml-->
+<view class="container">
+    <view class="subContainer">
+        <view class="left">
+            <text class="publishAt">发布于{{dateS}} | {{event[0].target}}</text>
+            <van-button type="danger" plain bind:click="onCancelEvent" >结束事项</van-button>
+        </view>
+        <van-tabs active="{{ active }}" type="card" custom-class="wide" swipeable color="#0347ce">
+            <van-tab title="展开">
+                <view class="mar">
+                    <text class="text">
+                        {{classid}}班共{{count}}人,今日{{nameS}},共{{nameS.length}}人未完成{{event[0].target}}任务
+                    </text>
+                    <van-button color="#0347ce" bind:click="onCopyZ">复制到剪贴板</van-button>
+                </view>
+            </van-tab>
+            <van-tab title="折叠">
+                <view class="mar">
+                    <text class="text">
+                        {{classid}}班共{{count}}人,今日{{count-nameS.length}}人已完成{{event[0].target}}任务,{{nameS.length}}人未完成{{event[0].target}}任务
+                    </text>
+                    <van-button color="#0347ce" bind:click="onCopyD">复制到剪贴板</van-button>
+                </view>
+            </van-tab>
+            <van-tab title="自定义">
+                <view class="mar">
+                    <view class="textarea">
+                        <textarea 	placeholder-class="placeholder" confirm-type="done" bindconfirm="onSetTemplate" value="{{template}}"
+                        placeholder="在模板中插入'${classid}'代表班级号、'${count}'代表总人数、'${name}'代表具体未完成人姓名、'${length}'代表未完成人数、'${target}'代表当前任务目标。只能保存单个模板。" />
+                    </view>
+                    <van-button color="#0347ce" bind:click="onCopyY">复制到剪贴板</van-button>
+                </view>
+            </van-tab>
+        </van-tabs>
+    </view>
+</view>

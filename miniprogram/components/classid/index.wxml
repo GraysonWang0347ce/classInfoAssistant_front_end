@@ -1,0 +1,4 @@
+<!--components/classid/index.wxml-->
+<view class="container" bindtap="onClass">
+    <text class="classId">{{classid}}</text>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/class/index.wxml-->
+
+<!-- @page 此页面对应Tabbar第一页 -->
+
+<view class="container">
+    <w-header class="header" color="{{color}}" />
+
+    <view class="subContainer">
+        <image src="../../images/joinClass.png" class="subText" />
+        <van-field type="number" placeholder="请输入班级号" input-class="inputClass" maxlength="10" bind:change="onChangeG" clearable="true" input-align="center" error-message="{{errmsg}}" error-message-align="center" />
+        <van-botton type="primary" custom-class="botton" color="#0347ce" bind:click="onConfirmG">确认</van-botton>
+    </view>
+
+    <view class="dividerStyle" />
+
+    <view class="subContainer">
+        <image src="../../images/createClass.png" class="subText" />
+        <van-field type="number" placeholder="请输入班级号" input-class="inputClass" maxlength="10" clearable="true" model:value="{{value}}" cursor-spacing="120" bind:change="onChangeP" input-align="center" error-message="{{errmsgg}}" error-message-align="center" />
+        <view class="parallel">
+            <van-botton type="primary" custom-class="botton" color="#0347ce" bind:click="onConfirmP">确认</van-botton>
+            <van-botton type="default" custom-class="botton" bind:click="onRandomC">随机</van-botton>
+        </view>
+    </view>
+
+    <!--以下为判断是否登录、输入姓名、长期订阅通知的弹出层 -->
+    <van-popup show="{{!isLogin || !isSubscribe || !isName}}" position="bottom" round custom-class="popup">
+        <van-botton wx:if="{{!isLogin || !isSubscribe}}" type="default">请您完成以下步骤以保证正常功能的使用。请打开“总是订阅通知”,姓名消息仅供统计消息使用。</van-botton>
+        <van-botton wx:if="{{!isLogin}}" bind:click="onLogin" type="primary" size="large" color="#0347ce" custom-style="width:200rpx !important">登录</van-botton>
+        <van-botton wx:if="{{!isSubscribe}}" bind:click="onSubscribe" type="primary" size="large" color="#0347ce" custom-style="width:200rpx !important">订阅通知</van-botton>
+        <van-field wx:if="{{!isName}}" placeholder="请输入真实姓名" maxlength="5" cursor-spacing="120" center="true" bind:confirm="onName"></van-field>
+    </van-popup>
+
+    <view class="bottonReach">下划进入班级</view>
+    
+</view>

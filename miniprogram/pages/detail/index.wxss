@@ -1,0 +1,34 @@
+/* pages/detail/index.wxss */
+.container{
+    width: 100%;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dividerStyle {
+    background-color: #dfdfdf;
+    height: 2rpx;
+    width: 95%;
+    border-radius: 40%;
+}
+
+.header{
+    font-size: 80rpx;
+    font-weight: 600;
+    padding: 20rpx 0 20rpx 5rpx;
+}
+
+.subContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0rpx 0rpx 30rpx 0rpx;
+}
+
+.select{
+    text-align: center !important;
+    height: 10rpx !important;
+}

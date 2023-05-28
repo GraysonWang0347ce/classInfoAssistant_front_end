@@ -1,0 +1,19 @@
+<!--pages/event/index.wxml-->
+
+<!-- 发布事件页，仅在身份为当前班级的管理员时方可进入 -->
+
+<view class="container">
+    <w-classid classid="{{classid}}" />
+    <view class="subContainer" wx:if="{{isPublish}}">
+        <van-field label="任务目标" input-class="inputClass" placeholder="核酸打卡" custom-class="marg" bind:confirm="onTar" />
+        <van-botton bind:click="onPublish" size="large"  custom-class="marg">选定： {{ShowDate.year}} 年 {{ShowDate.month}} 月 {{ShowDate.day}} 日 {{ShowDate.hour}} 时 {{ShowDate.minute}} 分</van-botton>
+        <van-datetime-picker type="datetime" value="{{ currentDate }}" title="请选择结束日期" min-date="{{ minDate }}" visible-item-count="6" bind:input="onInput" item-height="50" custom-class="marg" />
+        <van-picker show-toolbar="true" columns="{{typeList}}" title="请选择事项类型" bind:confirm="onConfirm" custom-class="marg picker" visible-item-count="2" />
+        <van-botton bind:click="onPublish" size="large" color="#0347ce" custom-class="marg">发布</van-botton>
+    </view>
+    <view class="subContainerr" wx:if="{{isView}}">
+        <block wx:for="{{viewEvent}}" class="subContainerr">
+            <w-event event="{{item}}" class="event" classid="{{classid}}" count="{{count}}" bind:cancel="onCancelEvent" />
+        </block>
+    </view>
+</view>

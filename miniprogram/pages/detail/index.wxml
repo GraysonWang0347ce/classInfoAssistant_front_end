@@ -1,0 +1,28 @@
+<!--pages/detail/index.wxml-->
+
+<!-- 事件详情页面 -->
+
+<view class="container">
+    <text class="header">已加入{{classCount}}个班级</text>
+    <view class="dividerStyle" />
+    <block wx:for="{{class}}" wx:key="00">
+        <w-classid classid="{{item[0].classid}}" count="{{item.length}}" bind:class="onClass" />
+        <view class="subContainer">
+            <block wx:for="{{item}}" wx:for-item="mate" wx:key="0">
+                <w-avatar imgSrc="{{mate.avatarUrl}}" aliyas="{{mate.aliyas}}" 
+                name="{{mate.name}}" isAdmin="{{mate.isAdmin}}" classid="{{mate.classid}}" bind:onAvatar="onCMS" />
+            </block>
+        </view>
+    </block>
+    <view class="dividerStyle" />
+</view>
+
+<van-action-sheet show="{{isCMS}}" bind:close="onClose" bind:select="onSelect"
+actions="{{actions}}" close-on-click-overlay="true" height="30% !important" >
+<van-button type="default" size="large">{{tempInfo.classid}} 已选择：{{tempInfo.name}}({{tempInfo.aliyas}})</van-button>
+</van-action-sheet>
+
+<van-action-sheet show="{{isClass}}" bind:close="onClose" bind:select="onSelectC"
+actions="{{actionsC}}" close-on-click-overlay="true" height="30% !important" >
+<van-button type="default" size="large">{{tempClass}}</van-button>
+</van-action-sheet>

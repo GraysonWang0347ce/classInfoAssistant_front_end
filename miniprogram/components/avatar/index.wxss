@@ -1,0 +1,37 @@
+/* components/avatar/index.wxss */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bgCircle {
+    width: 230rpx;
+    height: 230rpx;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    position: absolute;
+    top: 15rpx;
+    left: 15rpx;
+}
+
+.des {
+    background-color: #fdfdfd;
+    border-radius: 7rpx;
+    box-shadow: 0rpx 0 4rpx #cfcfcf;
+    max-width: 400rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 50rpx;
+    font-weight: 550;
+    padding: 2rpx 10rpx 2rpx 10rpx;
+}

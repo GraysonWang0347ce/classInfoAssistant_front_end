@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "w-avatar":"../../components/avatar/index",
+        "van-action-sheet": "../../miniprogram_npm/@vant/weapp/action-sheet/index",
+        "van-button": "../../miniprogram_npm/@vant/weapp/button/index",
+        "w-classid":"../../components/classid/index"
+    }
+}

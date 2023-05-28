@@ -1,0 +1,53 @@
+/* pages/profile/index.wxss */
+
+page {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cells {
+    width: 700rpx !important;
+    position: absolute;
+    bottom: -100rpx;
+}
+
+.botton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 60rpx;
+}
+
+.avatar {
+    margin-top: 140rpx;
+}
+
+.login {
+    width: 250rpx !important;
+    margin: 30rpx;
+}
+
+.pop{
+    width: 70% !important;
+    height: 20% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.plus{
+    margin: 30rpx 0 20rpx 0 !important;
+}
+
+.cancel{
+    width: 690rpx !important; 
+}

@@ -1,0 +1,10 @@
+<!--pages/view/index.wxml-->
+<view class="container">
+    <view wx:if="{{action == 1}}">
+        <image src="../../images/info.png" mode="widthFix" />
+    </view>
+
+    <view wx:if="{{action == 2}}">
+        <image src="../../images/contact.jpg" mode="widthFix" show-menu-by-longpress="true" />
+    </view>
+</view>

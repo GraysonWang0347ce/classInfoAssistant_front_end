@@ -1,0 +1,4 @@
+<!--components/formEvent/index.wxml-->
+<view class="subContainer" bindtap="onEvent">
+    <text class="publishAt">发布于{{date}} | {{event.target}}</text>
+</view>

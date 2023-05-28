@@ -1,0 +1,51 @@
+/* pages/form/index.wxss */
+
+page {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    width: 100%;
+}
+
+.popup {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    height: 40% !important;
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35%;
+    margin-bottom: 200rpx;
+}
+
+.header {
+    font-weight: 600;
+    font-size: 80rpx;
+}
+
+.img {
+    width: 600rpx;
+    height: 600rpx;
+    position: fixed;
+    top: 720rpx;
+    z-index: 9;
+}
+
+.highz{
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

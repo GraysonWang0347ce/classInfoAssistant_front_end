@@ -1,0 +1,12 @@
+/* components/classid/index.wxss */
+.container{
+    margin: 20rpx 0 20rpx 0;
+}
+
+.classId{
+    font-size: 100rpx;
+    font-weight: 700;
+    color: #0347ce;
+    text-shadow: 0rpx 0rpx 5rpx rgb(187, 185, 185);
+    padding: 20rpx 0 0 20rpx;
+}

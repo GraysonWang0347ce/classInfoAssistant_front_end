@@ -1,0 +1,19 @@
+/* components/formEvent/index.wxss */
+.subContainer {
+    width: 90%;
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0 0 14rpx #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20rpx;
+    z-index: 99;
+}
+
+.publishAt {
+    font-weight: 550;
+    font-size: 50rpx;
+    margin: 20rpx;
+    text-align: center;
+}

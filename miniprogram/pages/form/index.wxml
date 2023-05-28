@@ -1,0 +1,30 @@
+<!--pages/form/index.wxml-->
+
+<!-- @page 此页面对应Tabbar第二页 -->
+
+<view class="container">
+    <view class="headers">
+        <text class="header">您当前共有{{formNum}}件</text>
+        <text class="header">待办事项。</text>
+    </view>
+
+    <block wx:for="{{events}}" wx:key="eventId">
+        <van-transition show="{{formNum!=0}}" name="fade-up" duration="400" >
+            <view class="highz">
+                <w-formEvent class="highz" event="{{item}}" bind:event="onCancel" />
+            </view>
+        </van-transition>
+    </block>
+
+    <!--Loading gif-->
+    <image src="../../images/Loading1.gif" wx:if="{{formNum!=0}}" class="img"></image>
+    <image src="../../images/complete.gif" wx:if="{{formNum==0}}" class="img"></image>
+    <!-- <button bindtap="switchLoading" type="primary">Test</button> -->
+
+    <van-popup show="{{!isLogin || !isSubscribe || !isName}}" position="bottom" round custom-class="popup">
+        <van-botton wx:if="{{!isLogin || !isSubscribe}}" type="default">请您完成以下步骤以保证正常功能的使用。请打开“总是订阅通知”,姓名消息仅供统计消息使用。</van-botton>
+        <van-botton wx:if="{{!isLogin}}" bind:click="onLogin" type="primary" size="large" color="#0347ce" custom-style="width:200rpx !important">登录</van-botton>
+        <van-botton wx:if="{{!isSubscribe}}" bind:click="onSubscribe" type="primary" size="large" color="#0347ce" custom-style="width:200rpx !important">订阅通知</van-botton>
+        <van-field wx:if="{{!isName}}" placeholder="请输入真实姓名" maxlength="5" cursor-spacing="120" center="true" bind:confirm="onName"></van-field>
+    </van-popup>
+</view>

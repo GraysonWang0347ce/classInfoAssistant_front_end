@@ -1,0 +1,27 @@
+<!--pages/profile/index.wxml-->
+
+<!-- @page 此页面对应Tabbar第三页 -->
+
+<view class="container">
+    <!-- <van-botton type="default" color="#0347ce" custom-class="login" size="large" bind:click="onGetOpenId">openId</van-botton> -->
+    <w-avatar class="avatar" imgSrc="{{profileSrc}}" aliyas="{{aliyas}}" />
+
+    <van-botton type="default" color="#0347ce" custom-class="login" size="large" bind:click="onSetProfile">{{isLogin?"更新信息":"登录"}}</van-botton>
+    <!-- <van-botton type="default" color="#0347ce" custom-class="login" size="large" bind:click="onGetOpenId">openId</van-botton> -->
+
+    <van-cell-group inset="{{true}}" custom-class="cells">
+        <van-cell title="姓名（点击更改）" value="{{name?name:'null'}}" clickable="true" bind:click="onChangeName" size="large" />
+        <van-cell title="使用说明" clickable="true" bind:click="onInstruction" border="{{ true }}" size="large" />
+        <van-cell title="联系作者" label="交个朋友" bind:click="onConnect" border="{{ true }}" size="large" />
+        <van-cell title="敬请期待"  border="{{ true }}" size="large" />
+    </van-cell-group>
+
+    <view class="botton">
+        <van-botton custom-class="cancel" type="danger" plain bind:click="onCancellate">注销信息</van-botton>
+    </view>
+
+    <van-popup closeable="true" show="{{load}}" bind:close="onClose" round custom-class="pop">
+        <van-icon name="plus" size="30px" custom-class="plus" />
+        <van-field placeholder="真有人把名字都写错？" maxlength="5" cursor-spacing="120" center="true" bind:confirm="onName" center></van-field>
+    </van-popup>
+</view>
